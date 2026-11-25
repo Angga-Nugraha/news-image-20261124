@@ -1,8 +1,8 @@
 # The World in One Image — Tuesday 24 November 2026
 
-[![make.fun](https://img.shields.io/badge/make.fun-bounty-blue)](https://make.fun/bounty/news-image-20261124)
-[![news-image-20261124](https://img.shields.io/badge/competition-news--image--20261124-green)](https://make.fun/bounty/news-image-20261124)
-[![license](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+[![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/Angga-Nugraha/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/Angga-Nugraha/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
 One image summing up the world's news of Tuesday 24 November 2026, as a
 newspaper front page. The masthead names the date; the hero story is the
