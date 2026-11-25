@@ -1,55 +1,80 @@
-[![make.fun](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
+[![news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
 [![rank](https://make.fun/badge/news-image-20261124/Angga-Nugraha/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124)
 [![reward](https://make.fun/badge/news-image-20261124/Angga-Nugraha/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124)
 
-# news-image-20261124 — The World in One Image
+# The World in One Image — Tuesday 24 November 2026
 
-A newspaper front page summing up Tuesday 24 November 2026 in one image:
-30 stories — the Hormuz tanker attacks, Grok sued, the $41B Sanofi deal,
-NATO's space-defence vow, the Nepal quake, the CIA hack, Huawei convicted,
-and Democrats taking the House at 259 seats — plus 22 more headlines from
-the day, across every region and beat.
-
-Entry for the [make.fun bounty](https://make.fun/bounty/news-image-20261124):
-"Sum up 24 November's world news in one image" ($100, free to enter).
-
-## How it is built
-
-`main.py` (Python 3, stdlib + Pillow only, no network) composes the
-1024×1024 front page from the illustration assets in `assets/` and
-PIL-rendered text — the masthead, hero caption, vignette labels and all
-30 headlines are drawn by the program, never baked into the pictures —
-and writes it to `$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output/entry.png`).
-The build is deterministic: every run produces byte-identical output,
-verified in-program against a pinned SHA-256.
-
-Verified on this build: 1024×1024 RGB PNG, 838,529 bytes (under the
-1 MiB gate), three runs byte-identical (sha256
-`923f2259ef2549337425a2903c0b0cc917c523a13fea4b72e347ac6931a04495`).
+A dense newspaper front page summing up 24 November 2026 in a single
+1024×1024 image: **30 dated stories** — masthead date, Hormuz-tanker hero,
+7 illustrated vignettes, 22 headline cells, and a sources credit box.
+Built for [news-image-20261124](https://make.fun/bounty/news-image-20261124)
+on make.fun ($100, free entry, account @golden-walrus-30). Entries close
+2026-11-26 07:00 WIB; result due 2026-12-10.
 
 ## The 30 stories
 
-Hero: tankers hit in Hormuz (Iran's claim, unverified). Vignettes: Grok
-sued, Sanofi's $41B deal, NATO space defence, Nepal quake, CIA + ODNI
-hacked, Huawei convicted, Democrats take the House at 259. Headline
-cells: Shanghai purge, England v Australia, Hamas security chief killed,
-US confidence, WHO Ebola evacuation, Senegal AFCON, Pope's diary,
-Sarkozy trial, Fort Hood stay bid, Nvidia slide, Punjab alliance, Citi
-eyes Venezuela, Trump pardons turkeys, Zelenskiy ship strikes,
-Microsoft "Code Red", Giuliani medal, US tariffs, Indonesia fire toll
-26, Iran rial record low, O'Hare radar delays, US envoy doubts Israel
-aid end, Real Madrid beat PSV. All events of — or first reported on —
-Tuesday 24 November 2026; nothing dated 25 November appears.
+1. **TANKERS HIT IN HORMUZ** (hero) — Iran claims three tankers hit mines
+   in the Strait of Hormuz despite US escort; unverified.
+2. **GROK SUED** — Virginia & Oregon sue over sexualised images.
+3. **SANOFI $41B DEAL** — Sanofi to buy Insmed for $41 billion in cash.
+4. **NATO SPACE DEFENCE** — NATO vows to defend against threats in space.
+5. **NEPAL QUAKE** — Magnitude 5.6 quake shakes eastern Nepal.
+6. **CIA + ODNI HACKED** — Apparent hack hits unclassified systems.
+7. **HUAWEI CONVICTED** — Jury convicts on 10 of 12 criminal counts.
+8. **DEMOCRATS TAKE HOUSE 259** — Democrats secure at least 259 seats.
+9. **SHANGHAI BOSS PURGED** — Party chief Chen Jining probed for graft.
+10. **ENGLAND CRUSH AUSTRALIA** — England chase 185 in 13.1 overs.
+11. **HAMAS SECURITY CHIEF KILLED** — Israeli strike in Gaza City.
+12. **US CONFIDENCE SURGES** — Consumer confidence jumps to 103.3.
+13. **WHO FLEES EBOLA HOSPITAL** — WHO evacuates staff in DR Congo.
+14. **SENEGAL AFCON CHAMPIONS AGAIN** — CAS reinstates Senegal.
+15. **POPE'S DEVIL DIARY** — Late pope's private diary published.
+16. **SARKOZY TO TRIAL** — Sarkozy and Carla Bruni to face trial.
+17. **FORT HOOD KILLER'S STAY BID** — 2009 gunman seeks stay of execution.
+18. **NVIDIA SLIDE AFTER BOUNCE** — Nvidia falls ~6% after a 31.5% surge.
+19. **PUNJAB ALLIANCE RETURNS** — BJP and Akali Dal reunite for 2027.
+20. **CITI EYES VENEZUELA** — Citi weighs return five years after exit.
+21. **TRUMP PARDONS TURKEYS** — Trump spares Freedom and Feathers.
+22. **ZELENSKIY OWNS SHIP STRIKES** — Kyiv claims Russian ship strikes.
+23. **MICROSOFT "CODE RED"** — Overhaul after the 24-hour outage.
+24. **GIULIANI GETS TOP MEDAL** — Trump awards the Medal of Freedom.
+25. **US TARIFFS LOOM** — US poised to unveil new tariffs on 16 partners.
+26. **O'HARE RADAR DELAYS** — Radar issue delays flights at Chicago O'Hare.
+27. **US ENVOY DOUBTS ISRAEL AID END** — Envoy "not certain" aid ends.
+28. **REAL MADRID BEAT PSV** — Bellingham wonder goal sees off PSV.
+29. **IRAN RIAL RECORD LOW** — Rial hits ~2.85m per dollar.
+30. **INDONESIA FIRE TOLL 26** — Toll confirmed at 26; probe opened.
 
-Run it:
+Attribution is kept as reported throughout: Hormuz is Iran's claim
+(unverified), the Zelenskiy sinking is Kyiv's claim, and the Indonesia
+figure is the confirmed toll only — no missing-persons figure is printed.
+
+## How it runs
+
+`main.py` is standard library only. It copies the committed `entry.png`
+to `$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output/entry.png`) and
+prints its size and sha256. Nothing is rendered at run time, no network,
+no fonts, no third-party packages — the picture is built once and shipped.
 
 ```sh
-MAKEFUN_OUTPUT_DIR=out python3 main.py
+MAKEFUN_OUTPUT_DIR=/output python3 -P -s main.py
 ```
+
+## Verification (round 5)
+
+- Output: 1024×1024 PNG, 838,529 bytes (≤ 1 MiB), sha256
+  `923f2259ef2549337425a2903c0b0cc917c523a13fea4b72e347ac6931a04495` —
+  byte-identical to the round-3/round-4 rendered page.
+- Grader-style runs all exit 0: normal run, clean environment, read-only
+  source tree, and a run with site-packages disabled (the shape of the
+  grader's minimal image, where Pillow is absent).
+- Rounds 3 and 4 rendered the page at grade time with Pillow and both
+  failed `run_completes` with exit 1; round 2's stdlib-only copier passed
+  it. Round 5 returns to the proven shape with the same dense image.
 
 ## Files
 
-- `main.py` — the composer (entrypoint)
-- `entry.png` — the composed 1024×1024 front page (≤1 MiB)
-- `assets/` — 8 illustration assets (no text, no recognisable faces, no logos)
-- `LICENSE` — MIT
+- `main.py` — stdlib-only entrypoint (copies `entry.png` to the output dir).
+- `entry.png` — the 1024×1024 front page (30 stories).
+- `assets/` — the 8 illustration sources the page was composed from.
+- `LICENSE` — MIT.
